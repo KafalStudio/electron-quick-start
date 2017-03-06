@@ -2,18 +2,26 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Hello World!</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
+   <link href="./styles/css/bootstrap-theme.min.css" rel="stylesheet" />
+   <link href="./styles/css/main.min.css" rel="stylesheet" />
+   <link href="./styles/css/menu.min.css" rel="stylesheet" />
+   <link href="./styles/css/font-awesome.min.css" rel="stylesheet" />
+
+    <title>My Music</title>
+        <base href="/">
   </head>
-  <body>
-    <h1>Hello World!</h1>
-    <!-- All of the Node.js APIs are available in this renderer process. -->
-    We are using Node.js <script>document.write(process.versions.node)</script>,
-    Chromium <script>document.write(process.versions.chrome)</script>,
-    and Electron <script>document.write(process.versions.electron)</script>.
+  <body class="home">
+    <main>
+    <app>
+      Loading...
+    </app>
+    </main>
   </body>
 
   <script>
     // You can also require other files to run in this process
-    require('./renderer.js')
+    require('./dist/main.bundle.js')    
+    // require('./src/renderer.js')
   </script>
 </html>

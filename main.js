@@ -11,9 +11,9 @@ const url = require('url')
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow
 
-function createWindow () {
+function createWindow() {
   // Create the browser window.
-  mainWindow = new BrowserWindow({width: 800, height: 600})
+  mainWindow = new BrowserWindow({ width: 800, height: 600 })
 
   // and load the index.html of the app.
   mainWindow.loadURL(url.format({
@@ -23,7 +23,7 @@ function createWindow () {
   }))
 
   // Open the DevTools.
-  mainWindow.webContents.openDevTools()
+  // mainWindow.webContents.openDevTools()
 
   // Emitted when the window is closed.
   mainWindow.on('closed', function () {
@@ -31,7 +31,13 @@ function createWindow () {
     // in an array if your app supports multi windows, this is the time
     // when you should delete the corresponding element.
     mainWindow = null
-  })
+  });
+  mainWindow.on('app-command', function (event, command) {
+    console.log('command is ' + command);
+    if (command === 'browser-backward' && mainWindow.webContents.canGoBack()) {
+      mainWindow.webContents.goBack()
+    }
+  });
 }
 
 // This method will be called when Electron has finished

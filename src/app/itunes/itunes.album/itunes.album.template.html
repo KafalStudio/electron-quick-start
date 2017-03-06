@@ -1,0 +1,16 @@
+<section class='album'>
+    <div>
+        <img src="{{album.coverHref}}" />        
+    </div>    
+    <div class='label'>
+        <a href="{{album.albumUrl}}">{{album.albumName}}</a>
+    </div>    
+    <div class='artist'>
+        <div *ngIf="album.artistHref">
+            <a href="{{album.artistHref}}">{{album.artist}}</a>
+        </div>
+        <div *ngIf="!album.artistHref">
+            <div>{{album.artist}}</div>
+        </div>
+    </div>
+</section>

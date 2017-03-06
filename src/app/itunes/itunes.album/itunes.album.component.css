@@ -1,0 +1,35 @@
+.album {
+    width: 180px;
+    margin: 10px;
+    flex-shrink: 0;
+    flex-direction: column;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.artist{
+    justify-content: center;
+}
+
+.label{
+    justify-content: center;
+}
+
+.album > .label {
+    display: flex;
+}
+
+.album > .artist {
+    display: flex;
+}
+.album  a {
+    color: cadetblue;
+}
+.artist {
+    color: blueviolet
+}
+.artist a {
+    color: blueviolet
+}

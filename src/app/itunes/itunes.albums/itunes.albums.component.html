@@ -1,0 +1,14 @@
+<section class='videos'>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="video-header">
+                <h3>iTunes Top Albums</h3>
+            </div>
+        </div>
+        <div class='row'>
+            <div class='albums'>
+                <iTunesAlbum class="tile " [model]="albumfeed " *ngFor="let albumfeed of albums | async "></iTunesAlbum>
+            </div>
+        </div>
+    </div>
+</section>

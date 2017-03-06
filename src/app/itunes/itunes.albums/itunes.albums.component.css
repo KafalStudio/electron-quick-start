@@ -1,0 +1,31 @@
+.albums {
+    overflow-x: scroll;
+    display: -webkit-flex;
+    display: flex;
+    width: 100%;
+    overflow: auto;
+    scrollbar-base-color: rgba(80, 80, 80, 10);
+    scrollbar-face-color: rgba(150, 150, 150, 10);
+}
+
+.videos {
+    margin-top: 10px;
+}
+
+::-webkit-scrollbar {
+    background: saddlebrown;
+    
+}
+
+::-webkit-scrollbar-button       { /* 2 */ }
+::-webkit-scrollbar-track        { 
+    background: #773000;
+ }
+::-webkit-scrollbar-track-piece  { 
+    background: #704400;
+}
+::-webkit-scrollbar-thumb        { 
+    background: #775533;
+}
+::-webkit-scrollbar-corner       { /* 6 */ }
+::-webkit-resizer                { /* 7 */ }
